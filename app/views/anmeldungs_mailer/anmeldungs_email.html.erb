@@ -1,0 +1,20 @@
+<!--Mail-view in html Format-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<h1>Willkommen <%= @user.vorname %> <%= @user.nachname %> </h1>
+
+<p>Sie wurden vom Administrator des Schichtplans angemeldet.<br>
+  Dies sind ihre vorläufigen Logindaten: <br>
+  <strong>Anmeldungs-ID: <%= @user.email %> <br>
+    Passwort: <%= @user.password %></strong><br>
+  Ändern sie diese bitte umgehend<br>
+  <!--  <br>
+   bei vorhandener URL: Link zum Login -->
+</body>
+
+</html>

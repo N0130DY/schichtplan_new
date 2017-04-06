@@ -1,0 +1,24 @@
+body
+
+.login-form {
+    max-width: 280px;                                                                                                   /* maximale Länge */
+    padding: 15px;                                                                                                      /* Abstand */
+    margin:200px;                                                                                                       /* Einrücken */
+    margin-top:160px;
+    margin-left: 200px;
+}
+.panel-default {
+    opacity: 0.95;                                                                                                       /* Transparenz */
+}
+
+.fullscreen_bg {                                                                                                        /* Vollbild */
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url('http://i.imgur.com/fom3kcX.jpg');
+    background-repeat:repeat;
+}

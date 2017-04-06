@@ -1,0 +1,53 @@
+<%= form_for(user) do |f| %>
+    <% if user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+          <ul>
+            <% user.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :vorname %>
+      <%= f.text_field :vorname %>
+    </div>
+
+    <div class="field">
+      <%= f.label :nachname %>
+      <%= f.text_field :nachname %>
+    </div>
+
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+    </div>
+
+    <div class="field">
+      <%= f.label :rechte %>
+      <%= f.select :rechte, ['Manager', 'Angestellter']%>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
+
+    <div class="field">
+      <%= f.label :Passwortbestätigung %>
+      <%= f.password_field :password_confirmation %>
+    </div>
+
+
+    <div class="actions">                                                                                                <!--Buttons und Glyphicons-->
+      <%= button_tag(type: "submit", class: "btn btn-success") do %>
+          <i class="glyphicon glyphicon-check"></i> Erstellen
+      <% end %>
+      <%= link_to users_path, class: 'btn btn-danger' do%>
+          <i class="glyphicon glyphicon-remove"></i> Abbrechen
+      <% end %>
+    </div>
+<% end %>

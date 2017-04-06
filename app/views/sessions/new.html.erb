@@ -1,0 +1,57 @@
+<!-- Login -->
+<div class="wrapper">
+  <h2>Login</h2><br>
+  <%= form_for(:session, url: sessions_path) do |f| %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.submit "Login", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+<div id="fullscreen_bg" class="fullscreen_bg"/>
+<div class="login-form">
+<%= form_for(:session, url: sessions_path) do |f| %>
+<!--<form class="form-signin">-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <form class="form-signin">
+              <h3 class="text-center">
+                Login<br/><br/></h3>
+              <div class="form-group">
+                <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                            </span>
+                  <%= f.email_field :email, class: 'form-control', placeholder:'Email' %>
+                 <!-- <input type="text" class="form-control" placeholder="User Name" />-->
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                  <%= f.password_field :password, class: 'form-control', placeholder:'Passwort' %>
+                  <!--<input type="password" class="form-control" placeholder="Password" />-->
+                </div>    </div>
+
+              <%= f.submit "Login", class: "btn btn-lg btn-primary btn-block" %>
+              <!--<button class="btn btn-lg btn-primary btn-block" type="submit">
+                Login
+              </button>-->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--</form>-->
+<%end%>
+</div>
+</div>

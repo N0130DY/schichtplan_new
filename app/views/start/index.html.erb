@@ -1,0 +1,47 @@
+<!-- View manager ----------------------------------------------------------------------------------------------------->
+<% if can? :read, User %>
+<!-- Navigation links -->
+<aside class="col-sm-2">
+  <h2>Navigation</h2>
+  <div class="list-group">
+    <a href="/start" class="list-group-item active">1. <i class="glyphicon glyphicon-info-sign"></i> Start</a>
+    <a href="/users" class="list-group-item">2.  <i class="glyphicon glyphicon-user"></i> Mitarbeiter</a>
+    <a href="/plan" class="list-group-item">3. <i class="glyphicon glyphicon-calendar"></i> Plan</a>
+    <a href="/ansicht" class="list-group-item">4. <i class="glyphicon glyphicon-eye-open"></i> Ansicht</a>
+  </div>
+</aside>
+
+<div class="col-sm-10">
+  <h2> <i class="glyphicon glyphicon-info-sign"></i> Anleitung zur Benutzung des Schichtplans</h2>
+  <br>
+  <p>
+    blabla<br>
+    Mitarbeiter erstellen<br>
+    Plan erstellen<br>
+    Ansicht
+  </p>
+</div>
+
+<!--Ende View manager, Start View Mitarbeiter--------------------------------------------------------------------------->
+<% else %>
+<!-- Navigation links -->
+<aside class="col-sm-2">
+  <h2>Navigation</h2>
+  <div class="list-group">
+    <a href="/start" class="list-group-item active">1. <i class="glyphicon glyphicon-info-sign"></i> Start</a>
+    <a href="/ansicht" class="list-group-item">2.  <i class="glyphicon glyphicon-eye-open"></i> Ansicht</a>
+    <a href="/aktion" class="list-group-item">3. <i class="glyphicon glyphicon-calendar"></i> Aktionen</a>
+  </div>
+</aside>
+
+<div class="col-sm-10">
+  <h2> <i class="glyphicon glyphicon-info-sign"></i> Anleitung zur Benutzung des Schichtplans</h2>
+  <br>
+  <p>
+    blabla<br>
+    Mitarbeiter erstellen<br>
+    Plan erstellen<br>
+    Ansicht
+  </p>
+</div>
+<% end %>

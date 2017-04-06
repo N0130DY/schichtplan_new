@@ -1,0 +1,41 @@
+<!-- Navigation links -->
+<aside class="col-sm-2">
+  <h2>Navigation</h2>
+  <div class="list-group">
+    <a href="/start" class="list-group-item">1. <i class="glyphicon glyphicon-info-sign"></i> Start</a>
+    <a href="/users" class="list-group-item active">2.  <i class="glyphicon glyphicon-user"></i> Mitarbeiter</a>
+    <a href="/plan" class="list-group-item">3. <i class="glyphicon glyphicon-calendar"></i> Plan</a>
+    <a href="/ansicht" class="list-group-item">4. <i class="glyphicon glyphicon-eye-open"></i> Ansicht</a>
+  </div>
+</aside>
+
+<h2>Mitarbeiterdaten</h2>
+<br>
+
+<p>
+  <strong>Vorname:</strong>
+  <%= @user.vorname %>
+</p>
+
+<p>
+  <strong>Nachname:</strong>
+  <%= @user.nachname %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Rechte:</strong>
+  <%= @user.rechte %>
+</p>
+
+
+<%= link_to edit_user_path(@user), class: 'btn btn-warning' do%>
+    <i class="glyphicon glyphicon-edit"></i> Bearbeiten
+<% end %>&nbsp;
+<%= link_to users_path, class: 'btn btn-danger' do%>
+    <i class="glyphicon glyphicon-remove"></i> Zurück
+<% end %>
